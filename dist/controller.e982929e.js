@@ -1841,6 +1841,8 @@ const loadRecipe = async function (id) {
     alert(err);
   }
 };
+
+////////
 exports.loadRecipe = loadRecipe;
 },{"regenerator-runtime":"e155e0d3930b156f86c48e8d05522b16"}],"e155e0d3930b156f86c48e8d05522b16":[function(require,module,exports) {
 /**
@@ -2727,7 +2729,7 @@ class recipeView {
     `;
   }
 }
-var _default = new recipeView();
+var _default = new recipeView(); ////////
 exports.default = _default;
 },{"url:../../img/icons.svg":"c942bc853e43cba17b4ea6573f786514"}],"c942bc853e43cba17b4ea6573f786514":[function(require,module,exports) {
 module.exports = require('./bundle-url').getBundleURL() + require('./relative-path')("3e097321ecb44568", "ab101bcd4357ce87");
