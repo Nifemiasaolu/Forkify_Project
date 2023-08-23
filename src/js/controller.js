@@ -1,33 +1,23 @@
 import * as model from './model.js';
-import recipeView from './views/recipeView.js'
+import recipeView from './views/recipeView.js';
 
-import 'core-js/stable'; 
-import 'regenerator-runtime/runtime'; 
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 // Polyfill is used to provide modern functionality for older browsers.
 // Core-Js => For Polyfilling everything else(
 // Regenerator-runtime => For Polyfilling Async/Await
 const recipeContainer = document.querySelector('.recipe');
 
-const timeout = function (s) {
-  return new Promise(function (_, reject) {
-    setTimeout(function () {
-      reject(new Error(`Request took too long! Timeout after ${s} second`));
-    }, s * 1000);
-  });
-};
-
 // https://forkify-api.herokuapp.com/v2
 
 ///////////////////////////////////////
-
-
 
 const controlRecipes = async function () {
   try {
     const id = window.location.hash.slice(1);
     console.log(id);
 
-    if(!id) return;
+    if (!id) return;
     recipeView.renderSpinner();
 
     // 1) Loading recipe
@@ -35,13 +25,15 @@ const controlRecipes = async function () {
 
     // 2) Rendering Recipe
     recipeView.render(model.state.recipe);
-
-    
   } catch (err) {
-    alert(err);
+    recipeView.renderError()
   }
 };
 
-['hashchange', 'load'].forEach(ev => window.addEventListener(ev, controlRecipes));
-// window.addEventListener('hashchange', controlRecipes);
+const init = function() {
+  recipeView.addHandlerRender(controlRecipes);
+}
+init();
+
+// window.addEventListener('hashchange', controlRecips);
 // window.addEventListener('load', showRecipe);
