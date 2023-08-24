@@ -400,7 +400,6 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 const recipeContainer = document.querySelector('.recipe');
 
 // https://forkify-api.herokuapp.com/v2
-
 //////////////////////////////////////
 
 const controlRecipes = async function () {
@@ -1838,7 +1837,7 @@ const loadRecipe = async function (id) {
   }
 };
 
-////////
+///////
 exports.loadRecipe = loadRecipe;
 },{"regenerator-runtime":"e155e0d3930b156f86c48e8d05522b16","./config":"09212d541c5c40ff2bd93475a904f8de","./helpers":"0e8dcd8a4e1c61cf18f78e1c2563655d"}],"e155e0d3930b156f86c48e8d05522b16":[function(require,module,exports) {
 /**
@@ -2642,7 +2641,7 @@ const getJSON = async function (url) {
   }
 };
 
-// /////
+// ////
 exports.getJSON = getJSON;
 },{"regenerator-runtime":"e155e0d3930b156f86c48e8d05522b16","./config":"09212d541c5c40ff2bd93475a904f8de"}],"bcae1aced0301b01ccacb3e6f7dfede8":[function(require,module,exports) {
 "use strict";
@@ -2802,7 +2801,7 @@ class recipeView {
   `;
   }
 }
-var _default = new recipeView(); ////////
+var _default = new recipeView(); ///////
 exports.default = _default;
 },{"url:../../img/icons.svg":"c942bc853e43cba17b4ea6573f786514","fractional":"ddbc156a7c16e105c8df04e9fdec967d"}],"c942bc853e43cba17b4ea6573f786514":[function(require,module,exports) {
 module.exports = require('./bundle-url').getBundleURL() + require('./relative-path')("3e097321ecb44568", "ab101bcd4357ce87");
